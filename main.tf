@@ -16,7 +16,8 @@ resource "azurerm_virtual_machine" "vm" {
   name                  = "vm"
   location              = azurerm_resource_group.primary.location
   resource_group_name   = azurerm_resource_group.primary.name
-  vm_size               = "Standard_B1s"
+  //vm_size               = "Standard_B1s"
+  vm_size               = "Standard_D4as_v5"
   network_interface_ids = [azurerm_network_interface.vm.id]
 
   storage_image_reference {
